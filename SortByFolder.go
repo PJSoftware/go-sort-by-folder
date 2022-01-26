@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"./folders"
+	"pjsoftware/SortByFolder/folders"
 )
 
 // SortByFolder is intended to be run from the "series" parent folder (the same
