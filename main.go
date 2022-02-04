@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"pjsoftware/SortByFolder/folders"
+	"github.com/PJSoftware/go-sortbyfolder/folders"
 )
 
 // SortByFolder is intended to be run from the "series" parent folder (the same
