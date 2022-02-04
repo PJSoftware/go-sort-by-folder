@@ -1,15 +1,17 @@
-BINARY=SortByFolder.exe
+BINARY=bin/SortByFolder.exe
+
+.PHONY: build run install clean
 
 build:
-	GOARCH=amd64 GOOS=windows go build -o bin/${BINARY} main.go
+	GOARCH=amd64 GOOS=windows go build -o ${BINARY} main.go
 
-run: bin/${BINARY}
-	bin/${BINARY}
+run: ${BINARY}
+	${BINARY}
 
-install: bin/${BINARY}
-	cp bin/${BINARY} /h/_rip/_series
+install: ${BINARY}
+	cp ${BINARY} /h/_rip/_series
 
 clean:
-	if [ -f bin/${BINARY} ]; then rm bin/${BINARY}; fi
+	if [ -f ${BINARY} ]; then rm ${BINARY}; fi
 
-bin/${BINARY}: build
+${BINARY}: build
